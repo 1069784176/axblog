@@ -1,0 +1,59 @@
+<nav class="col-md-3">
+    <h3 class="home-link"><a href="{{ index .Site.Params "rootlink" | default .Site.BaseURL }}">{{ ( index $.Site.Data.translations $.Site.Params.locale ).root }}</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">{{ .Site.Title }} - {{ ( index $.Site.Data.translations $.Site.Params.locale ).mostrecentposts }}</h3>
+        <ul>
+            {{ range first 10 .Site.RegularPages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+
+  
+    {{ with .Site.Taxonomies.tags }}
+    <div id="tags" class="open">
+        <h3 data-open="tags">{{ ( index $.Site.Data.translations $.Site.Params.locale ).tags }}</h3>
+        <ul class="tags">
+            {{ range $name, $taxonomy := . }}
+            <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    
+    {{ with .Site.Taxonomies.categories }}
+    <div id="categories" class="open">
+        <h3 data-open="categories">{{ ( index $.Site.Data.translations $.Site.Params.locale ).categories }}</h3>
+        <ul class="categories">
+            {{ range $name, $taxonomy := . }}
+            <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Taxonomies.drafts }}
+    <div id="drafts" class="open">
+        <h3 data-open="drafts">{{ ( index $.Site.Data.translations $.Site.Params.locale ).drafts }}</h3>
+        <ul class="drafts">
+            {{ range $name, $taxonomy := . }}
+            <li><a href="/drafts/{{ $name | urlize }}">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }} 
+
+    {{ with .Site.Taxonomies.abouts }}
+    <div id="abouts" class="open">
+        <h3 data-open="abouts">{{ ( index $.Site.Data.translations $.Site.Params.locale ).abouts }}</h3>
+
+         <ul class="abouts">
+            {{ range $name, $taxonomy := . }}
+            <li><a href="/about/{{ $name }}">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }} 
+    
+</nav>
