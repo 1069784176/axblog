@@ -1,13 +1,13 @@
 baseurl = "http://hugo.spf13.com/"
-title = "GuoXing Blog"
-author = "Guo Xing"
+title = "A Blog"
+author = "A Xing"
 copyright = "Copyright (c) 2008 - 2014"
 canonifyurls = true
 paginate = 10
 
 
 [params]
-    author = "Guo Xing"
+    author = "A Xing"
     locale = "en-US"
 
 [taxonomies]
