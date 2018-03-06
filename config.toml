@@ -15,4 +15,5 @@ paginate = 10
     draft = "drafts"
     category = "categories"
     tag = "tags"
+    
 
