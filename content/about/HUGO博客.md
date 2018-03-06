@@ -70,15 +70,15 @@ title: "first"
 ## Step 4.创建 themes 目录：
 > ```
 $ cd themes
-$ git clone https://github.com/spf13/hyde.git
+$ git clone https://github.com/aubm/hugo-code-editor-theme.git
 ```
 运行Hugo
 在你的站点根目录执行 Hugo 命令进行调试：
 
 > ```
-$ hugo server --theme=hyde --buildDrafts
+$ hugo server --theme=hugo-code-editor-theme --buildDrafts
 ```
-（注明：v0.15 版本之后，不再需要使用 --watch 参数了）
+（注明：v0.15 版本之后，不再需要使用 --watchydeh 参数了）
 
 > 浏览器里打开： http://localhost:1313
 
@@ -89,7 +89,7 @@ $ hugo server --theme=hyde --buildDrafts
 
 > 在站点根目录执行 Hugo 命令生成最终页面：
 ```
-$ hugo --theme=hyde --baseUrl="或者https://1069784176.github.io/"
+$ hugo --theme=hugo-code-editor-theme --baseUrl="https://1069784176.github.io/"
 ```
 <font color=red>(注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成)</font><br/> 
 
