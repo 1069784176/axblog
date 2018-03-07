@@ -89,7 +89,7 @@ $ hugo server --theme=hugo-code-editor-theme --buildDrafts
 
 > 在站点根目录执行 Hugo 命令生成最终页面：
 ```
-$ hugo --theme=hugo-code-editor-theme --baseUrl="https://1069784176.github.io/"
+$ hugo --theme=hugo-code-editor-theme --baseUrl="https://1069784176.github.io"
 ```
 <font color=red>(注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 draft=true 再重新生成)</font><br/> 
 
